@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport">
-    <link rel="stylesheet" type=”text/css” href=”styles.css”>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/fontawesome/webfonts/fa-solid-900.ttf">
+
     <title>To Do List</title>
 <body>
-    <div>
-        <h1>My Todo-s</h1>
+    <div class="maincontainer">
+        <div>
+            <h1><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h1>
+        </div>
+        <div id="todoform">
+            <form>
+                <input type="text" placeholder="Add new...">
+                <input type="date">
+                <span class="form-button"><input type="submit" value="Add"></span>
+            </form>
+        </div>
+        <div id="todochecklist">
+                <ul type = none>
+                    <li><span><i class="fa-solid fa-check-square fa-xl"></i></span> Buy Groceries for a week.</li><br>
+                    <li><span><i class="fa-regular fa-square fa-xl"></i></i></span> Renew car insurance</li><br>
+                    <li><span><i class="fa-regular fa-square fa-xl"></i></span> Sign up for online course</li><br>
+                </ul>
+        </div>
     </div>
-    <div>
-        <form>
-            <input type="text" placeholder="Add new...">
-            <input type="date">
-            <input type="submit" value="Add">
-        </form>
-    </div>
-    <div>
-        <ul type = none>
-            <li><input type= "checkbox" value="Buy Groceries for a week">Buy Groceries for a week.</li>
-            <li><input type= "checkbox" value="Renew car insurance">Renew car insurance</li>
-            <li><input type= "checkbox" value="Sign up for online course" >Sign up for online course</li>
-        </ul>
-    </div>
-    
 </body>
 </html>
