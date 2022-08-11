@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=”width=device-width, initial-scale=1.0″>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/fontawesome/webfonts/fa-solid-900.ttf">
+
+    <title>To Do List</title>
+<body>
+    <header>
+        <div class = headercontent>
+            <h1><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h1>
+        </div>
+    </header>
+    <main>
+            <div class="row">
+                <form id="my-todos-form">
+                    <div class="col-9">
+                        <input id="add-new-to-do-item" type="text" placeholder="Add new...">
+                    </div>
+                    <div class="col-3">
+                        <!-- <span class="calendaricon" style="color:#006CFF ;"><i class="fa-regular fa-calendar-days"></i></span> -->
+                    <!-- <input type="date"> -->
+                        <span class="form-button"><input type="submit" value="Add To Do Item"></span>
+                    </div>
+                </form>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-12">
+                    <ul type = none id="my-to-dos-list">
+
+                    </ul>
+                </div>
+                <!-- <div class="col-2">
+                    <button class="edit-button button">
+                        Edit
+                    </button>
+                </div>
+                <div class="col-2">
+                    <button class="delete-button button">
+                        Delete
+                    </button>
+                </div> -->
+            </div>     
+    </main>
+</body>
+<script src="./assets/main.js"></script>
+<footer>
+</footer>
+</html>
