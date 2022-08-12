@@ -2,62 +2,71 @@
     box-sizing: border-box;
 }
 
- h1 {
+body{
+    background-color: #F8F9FA;
+    justify-content: center;
+    margin: 120px 120px;
+    width:900px;
+    
+}
+
+h1 {
     color: #006CFF;
     text-decoration: underline;
     text-align: center;
 }
-/*
-body{
-    background-color: #F8F9FA;
-    justify-content: center;
-    margin: 120px 0px
+
+#formcontainer{
+    margin: 60px 0;
+    /* border: 2px solid yellow; */
 }
 
-.maincontainer {
+ul#my-to-dos-list {
+    padding: 0;
+}
+
+/* #maincontainer {
+
     text-align: center;
-    width:900px;
-    height: 300px; 
+    
+    height: 150px; 
     margin:20px auto;
     margin: auto;
     width: 70%;
-    border: 1px solid red;
-}
+    border: 1px solid greenyellow;
+    display:flex;
+} */
 
-#todochecklist{
+/* #todochecklist{
     text-align: left;
-}
+} */
 
-.headercontent{
-    width: auto;
-    margin: 5px 25px;
-    border: 1px solid blue;
-}
 
-#todoform{
+
+/* #todoform{
     width: auto;
     margin: 15px 25px;
     text-align: justify;
     border: 5px solid white;
     background-color: white;
     
-}
+} */
 
-#todosfilter{
+/* #todosfilter{
     width: auto;
     margin: 5px 25px;
     border: 1px solid green;
     text-align: right;
-}
-.checklistcontainner{
+} */
+/* .checklistcontainner{
     display: flex;
-}
+} */
 
-#todochecklist{
+/* #todochecklist{
     border: 1px solid red;
     margin: 5px 25px;
     width: 50%;
-}
+} */
 /* #filterdate{
     margin: 5px 25px;
     width: 50%;
