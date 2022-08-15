@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type='text/javascript' src='assets/jquery/jquery-3.6.0.min.js'></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content=”width=device-width, initial-scale=1.0″>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="assets/fontawesome/webfonts/fa-solid-900.ttf">
-
+    
     <title>To Do List</title>
 <body>
     <header>
         <div class = headercontent>
-            <h1><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h1>
+            <h1 id="thisheading" ><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h1>
         </div>
     </header>
     <main>
@@ -48,8 +54,47 @@
                 </div> -->
             </div>     
     </main>
+    <h1>test this</h1>
 </body>
-<script src="./assets/main.js"></script>
+<!-- <script src="./assets/main.js"></script> -->
+
+<script>
+  
+//$("#thisheading").hide();
+// $('h1').hide();
+
+$(document).ready(function(){
+    const form_el          = $('#my-todos-form');
+    const input            = $("#add-new-to-do-item");
+    const my_to_do_list    = $('#my-to-dos-list');
+
+    $('#my-todos-form').submit(function(event){
+
+        event.preventDefault();
+        const to_do_form_item = $("#add-new-to-do-item").val();
+               
+        
+        $('#my-to-dos-list').append("<li  class ='to-do-item'> <input type = 'text' value="+ to_do_form_item + "></input> <button id='edit_button'><i class='fa-solid fa-pencil'></i> </button> <button id='delete_button'><i class='fa-solid fa-trash-can'></i> </button> </li>");
+        $('#my-to-dos-list').attr("readonly","readonly");
+
+        $('#edit_button').click(function(){
+            alert('time to edit');
+        $(this).removeAttr("readonly");
+        $(this).focus();
+        })
+
+        $('#delete_button').click(function(){
+            alert('time to remove');
+             $('.to-do-item').remove();
+        })
+        
+        
+        
+    })
+
+})
+ 
+</script>
 <footer>
 </footer>
 </html>
