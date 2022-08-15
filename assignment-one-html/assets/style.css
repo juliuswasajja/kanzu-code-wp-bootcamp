@@ -5,8 +5,12 @@
 body{
     background-color: #F8F9FA;
     justify-content: center;
-    margin: 120px 120px;
-    width:900px;
+    margin: 120px auto;
+    width:100%;
+    max-width: 900px;
+    border: 1px solid white;
+    box-shadow: 5px 10px 8px 4px grey;
+    border-radius: 5px;
     
 }
 
@@ -16,10 +20,31 @@ h1 {
     text-align: center;
 }
 
-#formcontainer{
-    margin: 60px 0;
+#form-container{
+    margin: 10px 0;
+    padding:20px;
+    background-color: white;
+    border-radius: 5px;
     /* border: 2px solid yellow; */
 }
+
+#filtersection .col-12 {
+    border-top: 1px solid grey;
+    text-align: right;
+    margin: 10px 0;
+    padding:3px;
+    background-color: white;
+    
+}
+
+#listcontainer {
+    margin: 10px 0;
+    padding:20px;
+    background-color: #F8F9FA;
+    border-radius: 5px; 
+}
+
+
 
 ul#my-to-dos-list {
     padding: 0;
@@ -113,6 +138,8 @@ ul {
     padding-inline-start: 0px;
 }  */
 
+
+/* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -126,39 +153,49 @@ ul {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+    background-color: lightgreen;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+ 
+    [class*=”col-“] {
+  
+        width: 100%;
+        
+          }
+          
+          
+    body {
+        
+      }
+
+ 
+  
+}
+
 [class*="col-"] {
     float: left;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
+    /* border-left: 1px solid red;
+    border-right: 1px solid red; */
 }
 
 .row {
-    border-bottom: 1px solid blue;
-    border-top: 1px solid blue;
+    /* border-bottom: 1px solid blue;
+    border-top: 1px solid blue; */
     display: flex;
 }
 
 
- /* @media only screen and (max-width: 768px) {
 
-  
-    [class*=”col-“] {
-  
-  width: 100%;
-  
-    }
 
-    body {
-        background-color: lightgreen;
-      }
+@media screen and (min-width: 480px) {
   
-  }
-
-  @media screen and (min-width: 480px) {
   
-  [class*=”col-“] {
-  
-    width: 100%;
-    
-      }
-} */
+} 

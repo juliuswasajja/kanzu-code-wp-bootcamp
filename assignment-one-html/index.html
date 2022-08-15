@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content=”width=device-width, initial-scale=1.0″>
+    <!-- <meta name="viewport" content=”width=device-width, initial-scale=1.0″> -->
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="assets/fontawesome/webfonts/fa-solid-900.ttf">
@@ -11,31 +11,59 @@
     <title>To Do List</title>
 <body>
     <header>
-        <div class = headercontent>
-            <h1><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h1>
-        </div>
+        
     </header>
     <main>
-            <div class="row" id="formcontainer">
+        <div class="row">
+            <div class ="col-12">
+                <h1><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h1>
+            </div>
+        </div>
+        
+        <div class="row" id="form-container">
+            <div class="col-9">
                 <form id="my-todos-form">
-                    <div class="col-9">
-                        <input id="add-new-to-do-item" type="text" placeholder="Add new...">
-                    </div>
-                    <div class="col-3">
-                        <!-- <span class="calendaricon" style="color:#006CFF ;"><i class="fa-regular fa-calendar-days"></i></span> -->
+                    <input id="add-new-to-do-item" type="text" placeholder="Add new...">
+            </div>
+
+            <div class="col-3">
+                <!-- <span class="calendaricon" style="color:#006CFF ;"><i class="fa-regular fa-calendar-days"></i></span> -->
                     <!-- <input type="date"> -->
-                        <span class="form-button"><input type="submit" value="Add"></span>
-                    </div>
+                    <input class="form-button" type="submit" value="Add">
                 </form>
             </div>
-            
-            
-            <div class="row">
-                <div class="col-12">
-                    <ul type = none id="my-to-dos-list">
+        </div>
+        
+        <div class="row" id="filtersection">
+            <div class="col-12">
+                <label for="cars">Filter</label>
 
-                    </ul>
-                </div>
+                    <select name="cars" id="cars">
+                    <option value="volvo">All</option>
+                    </select>
+                
+                    <label for="cars">Sort</label>
+
+                    <select name="cars" id="cars">
+                    <option value="volvo">Added date</option>
+                    </select>
+            </div>
+
+        </div>
+            
+        <div class="row" id="listcontainer">
+            <div class="col-12">
+                <ul type = none id="my-to-dos-list">
+                </ul>
+            </div>
+            <!-- <div class="col-3">
+                <ul type = none id="my-to-dos-list">
+                </ul>
+            </div> -->
+
+
+
+
                 <!-- <div class="col-2">
                     <button class="edit-button button">
                         Edit
@@ -46,7 +74,7 @@
                         Delete
                     </button>
                 </div> -->
-            </div>     
+        </div>     
     </main>
 </body>
 <script src="./assets/main.js"></script>
