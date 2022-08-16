@@ -10,24 +10,42 @@
 
     <title>To Do List</title>
 <body>
-    <div class="maincontainer">
-        <div>
-            <h1><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h1>
+          
+    <div class="row">
+            <div class="col-12 col-s-12">
+                <h2><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h2>
+            </div>
+    </div>
+
+    <div class="row">
+            <div class="col-12 col-s-12">
+                <p>filters here</p>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-s-12">
+            <div id="todoform">
+                <form>
+                    <input type="text" placeholder="Add new...">
+                    <input type="date">
+                    <span class="form-button"><input type="submit" value="Add"></span>
+                </form>
+            </div>
         </div>
-        <div id="todoform">
-            <form>
-                <input type="text" placeholder="Add new...">
-                <input type="date">
-                <span class="form-button"><input type="submit" value="Add"></span>
-            </form>
-        </div>
-        <div id="todochecklist">
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-s-12">
+            <div id="todochecklist">
                 <ul type = none>
                     <li><span><i class="fa-solid fa-check-square fa-xl"></i></span> Buy Groceries for a week.</li><br>
                     <li><span><i class="fa-regular fa-square fa-xl"></i></i></span> Renew car insurance</li><br>
                     <li><span><i class="fa-regular fa-square fa-xl"></i></span> Sign up for online course</li><br>
                 </ul>
+            </div>
         </div>
     </div>
+    
 </body>
 </html>
