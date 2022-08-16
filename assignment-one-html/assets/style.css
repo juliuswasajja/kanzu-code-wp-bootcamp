@@ -1,29 +1,88 @@
-h2 {
-    color: #006CFF;
-    text-decoration: underline;
-    text-align: center;
-    
+* {
+    box-sizing: border-box;
+}
+
+* {
+    font-size: 15px;
 }
 
 body{
     margin: 15% 10%;
-}
-/*
-.maincontainer {
-    text-align: center;
-    width:900px;
-    height: 300px; 
-    margin:20px auto;
+    background-color: #F8F9FA;
+    box-shadow: 5px 10px 8px 4px grey;
+    border-radius: 5px;
 }
 
-#todochecklist{
-    text-align: left;
+#headercontainer{
 }
+
+h2 {
+    color: #006CFF;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 30px; 
+}
+i.fa-solid.fa-check-square{
+    font-size: 30px; 
+}
+
+
 
 #todoform{
-    width: auto;
-    margin: 5px 25px;
-    text-align: justify;
+    border-radius: 5px
+   
+}
+#todoform .col-9.col-s-12 {
+    background-color: white;
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none;
+}
+
+i.fa-regular.fa-calendar-days {
+    color: #006CFF;
+}
+#todoform .col-3.col-s-12 {
+    background-color: white;
+    padding: 10px;
+    text-align: right;
+}
+input[type="submit"]{
+    background-color: #006CFF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+#filtersection{
+    text-align: right;
+    margin: 10px 0;
+    color: #485058;
+}
+
+label {
+
+}
+
+select#added-date,
+select#activities {
+    padding: 0px 15px;
+    color: #485058;
+}
+
+
+#listcontainer {
+    background-color: #F8F9FA;
+    border-radius: 5px;
+}
+
+
+ul {
+    padding: 0;
 }
 
 ul li span{
@@ -33,19 +92,15 @@ ul li span{
 li {
     color: #485058;
 }
-input[type="submit"]{
-    background-color: #006CFF;
-    color: white;
-    border-radius: 5px;
-} */
-/* New css */
 
 [class*="col-"] {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   [class*="row"] {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    padding: 25px 50px;
+    display:flex;
   }
 
 

@@ -11,32 +11,51 @@
     <title>To Do List</title>
 <body>
           
-    <div class="row">
+    <div class="row" id="headercontainer">
             <div class="col-12 col-s-12">
                 <h2><span><i class="fa-solid fa-check-square"></i></span> My Todo-s</h2>
             </div>
     </div>
 
-    <div class="row">
-            <div class="col-12 col-s-12">
-                <p>filters here</p>
-            </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 col-s-12">
-            <div id="todoform">
+    <div class="row" id="todoform">
+        <div class="col-9 col-s-12">
                 <form>
                     <input type="text" placeholder="Add new...">
-                    <input type="date">
+        </div>    
+        <div class="col-3 col-s-12">
+                    <span><i class="fa-regular fa-calendar-days"></i></span>
                     <span class="form-button"><input type="submit" value="Add"></span>
                 </form>
-            </div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="filtersection">
         <div class="col-12 col-s-12">
+            <label for="activities">Filter</label>
+
+                <select name="activities" id="activities">
+                <option value="all">All</option>
+                </select>
+            
+                <label for="activities">Sort</label>
+
+                <select name="added-date" id="added-date">
+                <option value="date">Added date</option>
+                </select>
+        </div>
+    </div>
+
+    <div class="row" id="listcontainer">
+        <div class="col-6 col-s-12">
+            <div id="todochecklist">
+                <ul type = none>
+                    <li><span><i class="fa-solid fa-check-square fa-xl"></i></span> Buy Groceries for a week.</li><br>
+                    <li><span><i class="fa-regular fa-square fa-xl"></i></i></span> Renew car insurance</li><br>
+                    <li><span><i class="fa-regular fa-square fa-xl"></i></span> Sign up for online course</li><br>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 col-s-12">
             <div id="todochecklist">
                 <ul type = none>
                     <li><span><i class="fa-solid fa-check-square fa-xl"></i></span> Buy Groceries for a week.</li><br>
