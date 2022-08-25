@@ -85,43 +85,20 @@ $(document).ready(function(){
         const to_do_form_item = $("#add-new-to-do-item").val();
                
         
-        //$('#my-to-dos-list').append("<li  class ='to-do-item'> <input type = 'text' value="+ to_do_form_item + "></input> <button id='edit_button'><i class='fa-solid fa-pencil'></i> </button> <button id='delete_button'><i class='fa-solid fa-trash-can'></i> </button> </li>");
         $('#my-to-dos-list').append("<li class ='to-do-item'> <input class='task_input_value' type = 'text' value="+ to_do_form_item + "></input> <button class='edit_button'><i class='fa-solid fa-pencil'></i> </button> <button class ='delete_button'><i class='fa-solid fa-trash-can'></i> </button> </li>");
         $('.task_input_value').attr("readonly","readonly");
 
-        // $('#edit_button').click(function(){
-        //     alert('time to edit');
-        // $('#task_input_value').removeAttr("readonly");
-        // $('#task_input_value').focus();
-        // })
-
-        // $('#delete_button').click(function(){
-        //    // alert('time to remove');
-        //    $(this).closest('.to-do-item').remove();
-        //     // $('.to-do-item').remove();
-
-            
-        // })
 
         $('.edit_button').click(function(){
-            alert('time to edit');
-        //  $(this).closest('.to-do-item').removeAttr("readonly");
-        //  $(this).closest('.to-do-item').focus();
-        $('.task_input_value').removeAttr("readonly");
-        $('.task_input_value').focus();
+        $(this).siblings('.task_input_value').removeAttr("readonly");
+        $(this).siblings('.task_input_value').focus();
         })
 
         $('.delete_button').click(function(){
-        // $(this) -> refers to the currently clicked button.
-        // closest -> Looks find the parent of the currently clicked button with class name '.to-do-item' and then removes it.
         $(this).closest('.to-do-item').remove();
 })
 
-
-
-        
-        
-        
+     
     })
 
 })
