@@ -45,11 +45,11 @@
 
         <p>
             <?php
-                echo 'final test';
+                // echo 'final test';
 
-                print_r($_REQUEST);
-                //file_put_contents("post.log", print_r($_POST['todoitem'], true));
-                file_put_contents("postreq.log", print_r($_REQUEST, true));
+                // print_r($_REQUEST);
+                // file_put_contents("post.log", print_r($_POST['todoitem'], true));
+                // file_put_contents("postreq.log", print_r($_REQUEST, true));
 
 
             ?>
@@ -73,9 +73,9 @@
 
 
             echo 'This div is for php only ';
-            //var_dump($_POST['todoitem']);
-            var_dump($_REQUEST);
-            var_dump($_GET);
+            var_dump($_POST['todoitem']);
+            //var_dump($_REQUEST);
+            //var_dump($_GET);
             
             
             ?></p>
