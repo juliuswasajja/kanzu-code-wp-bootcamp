@@ -6,7 +6,7 @@ window.addEventListener('load',() => {
     
 
     form_el.addEventListener('submit',(e) => {
-        e.preventDefault();
+        //e.preventDefault();
         const to_do_form_item = input.value;      
     
         // const to_do_list = document.createElement("ul");

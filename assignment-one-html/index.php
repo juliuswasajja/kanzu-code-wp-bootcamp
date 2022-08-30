@@ -22,14 +22,14 @@
         
         <div class="row" id="form-container">
             <div class="col-9">
-                <form id="my-todos-form">
-                    <input id="add-new-to-do-item" type="text" placeholder="Add new...">
+                <form id="my-todos-form" method="POST">
+                    <input id="add-new-to-do-item" name="todoitem" type="text" placeholder="Add new...">
             </div>
 
             <div class="col-3">
                 <!-- <span class="calendaricon" style="color:#006CFF ;"><i class="fa-regular fa-calendar-days"></i></span> -->
                     <!-- <input type="date"> -->
-                    <input class="form-button" type="submit" value="Add">
+                    <input class="form-button" type="submit" value="Add" >
                 </form>
             </div>
         </div>
@@ -56,6 +56,37 @@
                 <ul type = none id="my-to-dos-list">
                 </ul>
             </div>
+
+           
+            <div class='row'>
+                <?php
+                if ( isset($_POST['todoitem'])){
+
+                    file_put_contents("post.log", print_r($_POST['todoitem'], true));
+                    file_put_contents("postreq.log", print_r($_REQUEST, true));
+                    
+                    $item_name = $_POST['todoitem'];
+
+                    ?> <p> <?php
+
+                    echo $item_name;
+
+                    ?> </p>
+                    <?php
+                    }
+                else{
+                    echo 'to do item empty';
+                }
+
+                ?>
+                <p>
+                   
+                </p>
+
+            </div>
+
+
+            
             <!-- <div class="col-3">
                 <ul type = none id="my-to-dos-list">
                 </ul>
@@ -77,7 +108,7 @@
         </div>     
     </main>
 </body>
-<script src="./assets/main.js"></script>
+<!-- <script src="./assets/main.js"></script> -->
 <footer>
 </footer>
 </html>
