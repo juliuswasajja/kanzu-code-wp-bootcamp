@@ -31,6 +31,19 @@
                     <!-- <input type="date"> -->
                     <input class="form-button" type="submit" value="Add" >
                 </form>
+
+                    <?php
+
+                    $to_do_list=["sleep","shower"];
+
+                    if(isset($_POST['todoitem'])){
+                    
+                    $to_do_item = $_POST['todoitem'];
+
+                    array_push ($to_do_list, $to_do_item);
+                    }            
+
+                    ?>
             </div>
         </div>
         
@@ -52,59 +65,37 @@
         </div>
             
         <div class="row" id="listcontainer">
-            <div class="col-12">
-                <ul type = none id="my-to-dos-list">
-                </ul>
-            </div>
 
-           
-            <div class='row'>
+
+            <div class="col-8">
+                <ul type = none id="my-to-dos-list">
                 <?php
-                if ( isset($_POST['todoitem'])){
-
-                    file_put_contents("post.log", print_r($_POST['todoitem'], true));
-                    file_put_contents("postreq.log", print_r($_REQUEST, true));
                     
-                    $item_name = $_POST['todoitem'];
-
-                    ?> <p> <?php
-
-                    echo $item_name;
-
-                    ?> </p>
-                    <?php
+                    foreach ($to_do_list as $to_do_item){
+                        echo "<li>. $to_do_item . 
+                        
+                    <button class=''edit-button button'>
+                        Edit
+                    </button> 
+                    <button class='delete-button button'>
+                        Delete
+                    </button>";
                     }
-                else{
-                    echo 'to do item empty';
-                }
-
+                
                 ?>
-                <p>
-                   
-                </p>
-
+                </ul>
             </div>
 
-
-            
-            <!-- <div class="col-3">
-                <ul type = none id="my-to-dos-list">
-                </ul>
-            </div> -->
-
-
-
-
-                <!-- <div class="col-2">
+            <!-- <div class="col-2">
                     <button class="edit-button button">
                         Edit
                     </button>
-                </div>
-                <div class="col-2">
+            </div>
+            <div class="col-2">
                     <button class="delete-button button">
                         Delete
                     </button>
-                </div> -->
+            </div> -->
         </div>     
     </main>
 </body>
