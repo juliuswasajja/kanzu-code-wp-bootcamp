@@ -10,6 +10,14 @@
 
     <title>To Do List</title>
 <body>
+    <?php 
+    include 'connection.php';
+    include 'insert.php';
+    include 'select.php';
+
+    ?>
+
+            
     <header>
         
     </header>
@@ -22,7 +30,7 @@
         
         <div class="row" id="form-container">
             <div class="col-9">
-                <form id="my-todos-form" method="POST">
+                <form id="my-todos-form" method="POST" action="insert.php"">
                     <input id="add-new-to-do-item" name="todoitem" type="text" placeholder="Add new...">
             </div>
 
@@ -32,18 +40,18 @@
                     <input class="form-button" type="submit" value="Add" >
                 </form>
 
-                    <?php
+                     <?php
 
-                    $to_do_list=["sleep","shower"];
+                    // $to_do_list=["sleep","shower"];
 
-                    if(isset($_POST['todoitem'])){
+                    // if(isset($_POST['todoitem'])){
                     
-                    $to_do_item = $_POST['todoitem'];
+                    // $to_do_item = $_POST['todoitem'];
 
-                    array_push ($to_do_list, $to_do_item);
-                    }            
+                    // array_push ($to_do_list, $to_do_item);
+                    // }            
 
-                    ?>
+                     ?>
             </div>
         </div>
         
@@ -96,6 +104,9 @@
                         Delete
                     </button>
             </div> -->
+
+            
+            
         </div>     
     </main>
 </body>
