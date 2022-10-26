@@ -1,1 +1,0 @@
-###Kanzu Code WordPress Bootcamp
